@@ -1,0 +1,72 @@
+@import 'normalize.css';
+
+/* Fonts emmbeded */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../../assets/fonts/GothamMedium.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('../../../assets/fonts/BeVietnamPro-Light.ttf');
+}
+
+:root {
+    --font-family: 'Gotham', sans-serif;
+    --sidebar-font: 'Gotham', sans-serif;
+    --content-font: 'Be Vietnam Pro', sans-serif;
+
+    /* Global Colors */
+    --white-color: #fff;
+    --primary-color: #1ed760;
+    --global-bg-base-color: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizespeed;
+    color: var(--text-color);
+    overflow-y: overlay;
+}
+
+li {
+    list-style: none;
+}
+
+/* Scrollbar CSS */
+// ::-webkit-scrollbar {
+//     border-radius: 0;
+//     width: 8px;
+// }
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: hsla(0, 0%, 100%, 0.3);
+    // width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    // background-color: hsla(0, 0%, 100%, 0.3);
+}
+
+// *::-webkit-scrollbar-track {
+//     border-radius: 0;
+//     width: 12px;
+//     background-color: rgba(0, 0, 0, 0);
+// }
