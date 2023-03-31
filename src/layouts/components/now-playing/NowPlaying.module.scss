@@ -1,0 +1,154 @@
+.wrapper {
+    --media-control-bg-color: #181818;
+    --small-font-size: var(--12px-em);
+    --pogressbar-height: 4px;
+
+    font-family: var(--media-control-font);
+    width: 100%;
+    height: 90px;
+    padding: 0 16px;
+    // overflow: hidden;
+    background-color: var(--media-control-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+    font-size: var(--13px-em);
+}
+
+.now-playing {
+    display: flex;
+    min-width: 180px;
+    width: 30%;
+    .track {
+        display: flex;
+        align-items: center;
+    }
+    .track-thumbnail {
+        min-width: 56px;
+        min-height: 56px;
+        width: 56px;
+        height: 56px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .track-info {
+        font-family: var(--vietnamese-font);
+        display: flex;
+        flex-direction: column;
+        margin: 0 14px;
+        // flex-shrink: 1;
+        justify-content: center;
+        .track-title {
+            font-weight: 600;
+            margin-bottom: 1px;
+        }
+        .track-artist {
+            opacity: 0.82;
+            margin-top: 1px;
+            font-size: var(--small-font-size);
+        }
+        .track-title,
+        .track-artist {
+            font-family: var(--vietnamese-font);
+            &:hover {
+                text-decoration: underline;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.player-controls {
+    min-width: 290px;
+    max-width: 722px;
+    width: 40%;
+    padding: 0 24px;
+    .time-elapsed,
+    .track-duration {
+        opacity: 0.82;
+        font-size: var(--small-font-size);
+        width: 40px;
+    }
+
+    .time-elapsed {
+        text-align: right;
+    }
+
+    .track-duration {
+        text-align: left;
+    }
+    .control-buttons {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 8px;
+        .control-buttons-left {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .control-buttons-right {
+            display: flex;
+            justify-content: flex-start;
+            align-self: flex-end;
+        }
+        .btn-pause {
+            background-color: var(--white-color);
+            border-radius: 50%;
+        }
+    }
+    .playback-bar {
+        align-items: center;
+        width: 100%;
+        display: flex;
+    }
+}
+
+.player-toolbar {
+    min-width: 180px;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .progressbar-volume {
+        width: 93px;
+    }
+}
+
+/* ### Commons */
+
+.progressbar-wrapper {
+    width: 100%;
+    height: 12px;
+    padding: 4px 0;
+    margin: 0 8px;
+    gap: 8px;
+    align-items: center;
+    .progressbar {
+        width: 100%;
+        border-radius: 4px;
+        height: var(--pogressbar-height);
+        background-color: var(--grey-color);
+    }
+}
+
+.btn {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    opacity: 0.82;
+
+    &:hover {
+        opacity: 1;
+    }
+}

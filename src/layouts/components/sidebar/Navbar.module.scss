@@ -1,0 +1,123 @@
+.wrapper {
+    width: 100%;
+    padding-top: 24px;
+    background-color: #000;
+    font-size: var(--14px-em);
+    font-family: var(--sidebar-font);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.resizer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 9px;
+    height: 100%;
+    background-color: #fff;
+    background: linear-gradient(hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 100%, 0.3))
+        no-repeat 50%/1px 100%;
+    cursor: e-resize;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inside inner */
+
+.logo {
+    padding: 0 24px;
+    margin-bottom: 19px;
+    width: 100%;
+}
+
+.main-navbar {
+    list-style-type: none;
+}
+
+.second-navbar {
+    margin-top: 24px;
+    .nav-icon {
+        width: 24px;
+        height: 24px;
+        padding: 4px;
+        background-color: #fff;
+        border-radius: var(--global-border-radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .liked-songs-icon {
+        background: linear-gradient(135deg, #450af5, #c4efd9);
+    }
+    .your-episodes-icon {
+        background: #006450;
+    }
+}
+
+.seperator {
+    padding: 0 24px;
+    display: flex;
+    align-items: flex-end;
+    height: 9px;
+    .seperator-line {
+        height: 1.6px;
+        width: 100%;
+        background-color: #282828;
+    }
+}
+
+.playlist-navbar {
+    overflow-y: auto;
+    flex: 1 0 auto;
+    min-height: 0;
+}
+
+/* ### Commons */
+.navbar-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    padding: 0 8px;
+}
+
+.nav-link {
+    opacity: 0.82;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 16px;
+    white-space: nowrap;
+    span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        font-size: var(--13px-em);
+    }
+}

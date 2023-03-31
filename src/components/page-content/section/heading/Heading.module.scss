@@ -1,0 +1,36 @@
+.wrapper {
+    --title-font-size: var(--24px-em);
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    background: transparent;
+    margin-bottom: 16px;
+}
+
+.title {
+    .title-text {
+        font-size: var(--title-font-size);
+    }
+}
+
+.href {
+    font-size: var(--href-font-size);
+    opacity: 0.82;
+    &:hover {
+        opacity: 1;
+        text-decoration: underline;
+    }
+}
+
+/* ### Commons */
+
+.hover-underline {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.large {
+    --title-font-size: var(--30px-em);
+}

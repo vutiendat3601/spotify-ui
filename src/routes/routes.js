@@ -1,9 +1,10 @@
 import configs from '../configs/configs';
 import MainLayout from '../layouts/main-layout/MainLayout';
 import Home from '../pages/home/Home';
-import Search from '../pages/home/Home';
-import Collection from '../pages/home/Home';
-import Playlist from '../pages/home/Home';
+import Search from '../pages/search/Search';
+import Collection from '../pages/collection/Collection';
+import Playlist from '../pages/playlist/Playlist';
+import Artist from '../pages/artist/Artist';
 
 const publicRoutes = [
     {
@@ -13,17 +14,22 @@ const publicRoutes = [
     },
     {
         path: configs.routes.search,
-        component: Home,
+        component: Search,
         layout: MainLayout,
     },
     {
         path: configs.routes.collection,
-        component: '',
+        component: Collection,
         layout: MainLayout,
     },
     {
         path: configs.routes.playlist,
-        component: '',
+        component: Playlist,
+        layout: MainLayout,
+    },
+    {
+        path: configs.routes.artist,
+        component: Artist,
         layout: MainLayout,
     },
 ];

@@ -1,0 +1,29 @@
+.wrapper {
+    font-family: var(--content-font);
+    min-height: 332px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.header-spacer {
+    height: 64px;
+    position: sticky;
+    opacity: 0;
+    top: 0;
+    z-index: 9;
+    background-color: #000;
+
+    &.visible {
+        opacity: 1;
+    }
+}
+
+.header-bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.content {
+    padding: 24px 32px 0;
+}

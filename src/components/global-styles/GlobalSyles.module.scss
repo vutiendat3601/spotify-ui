@@ -1,0 +1,115 @@
+@import 'normalize.css';
+
+/* Fonts emmbeded */
+@font-face {
+    font-family: 'Circular Medium';
+    src: url('../../assets/fonts/CircularMedium.otf');
+}
+@font-face {
+    font-family: 'Circular Black';
+    src: url('../../assets/fonts/CircularBlack.otf');
+}
+@font-face {
+    font-family: 'Circular Book';
+    src: url('../../assets/fonts/CircularBook.otf');
+}
+@font-face {
+    font-family: 'Circular Book';
+    src: url('../../assets/fonts/CircularBook.otf');
+}
+@font-face {
+    font-family: 'Be Vietnam Pro Thin';
+    src: url('../../assets/fonts/BeVietnamProThin.ttf');
+}
+@font-face {
+    font-family: 'Be Vietnam Pro Light';
+    src: url('../../assets/fonts/BeVietnamProLight.ttf');
+}
+@font-face {
+    font-family: 'Be Vietnam Pro Medium';
+    src: url('../../assets/fonts/BeVietnamProMedium.ttf');
+}
+@font-face {
+    font-family: 'Be Vietnam Pro Semi Bold';
+    src: url('../../assets/fonts/BeVietnamProSemiBold.ttf');
+}
+@font-face {
+    font-family: 'Be Vietnam Pro Black';
+    src: url('../../assets/fonts/BeVietnamProBlack.ttf');
+}
+
+:root {
+    --font-family: 'Circular Medium', sans-serif;
+    --sidebar-font: 'Circular Medium', sans-serif;
+    --header-font: 'Circular Book', sans-serif;
+    --media-control-font: 'Circular Book', sans-serif;
+
+    --content-font: 'Circular Black', sans-serif;
+    --vietnamese-font: 'Be Vietnam Pro Medium', sans-serif;
+
+    /* Global Colors */
+    --white-color: #fff;
+    --grey-color: #5e5e5e;
+    --primary-color: #1ed760;
+    --green-color: #1ed760;
+    --global-bg-base-color: #121212;
+
+    /* Common */
+    --global-border-radius: 4px;
+    --32px-em: 2em;
+    --30px-em: 1.875em;
+    --24px-em: 1.5em;
+    --16px-em: 1.125em;
+    --16px-em: 1em;
+    --14px-em: 0.875em;
+    --13px-em: 0.8125em;
+    --12px-em: 0.75em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 768px;
+    min-height: 600px;
+    font-family: var(--font-family);
+    text-rendering: optimizespeed;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+}
+
+/* Scrollbar CSS */
+// ::-webkit-scrollbar {
+//     border-radius: 0;
+//     width: 8px;
+// }
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: hsla(0, 0%, 100%, 0.3);
+    // width: 8px;
+}

@@ -1,10 +1,12 @@
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
-
-import images from './assets/images/images';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { publicRoutes } from './routes/routes';
 
+/* import styles from './App.module.scss';
+import classNames from 'classnames/bind';
+
+const css = classNames.bind(styles); */
+
 function App() {
-    const SidebarLogo = images.sidebarLogoSvg;
     return (
         <BrowserRouter>
             <div className="app">
@@ -14,6 +16,7 @@ function App() {
                         const Layout = route.layout;
                         return (
                             <Route
+                                index
                                 key={index}
                                 path={route.path}
                                 element={
