@@ -5,6 +5,7 @@ import Search from '../pages/search/Search';
 import Collection from '../pages/collection/Collection';
 import Playlist from '../pages/playlist/Playlist';
 import Artist from '../pages/artist/Artist';
+import Queue from '../pages/queue/Queue';
 
 const publicRoutes = [
     {
@@ -30,6 +31,11 @@ const publicRoutes = [
     {
         path: configs.routes.artist,
         component: Artist,
+        layout: MainLayout,
+    },
+    {
+        path: configs.routes.queue,
+        component: Queue,
         layout: MainLayout,
     },
 ];

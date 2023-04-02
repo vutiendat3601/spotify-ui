@@ -33,7 +33,7 @@ const Home = () => {
                 >
                     <PlaylistList items={madeForYouList} />
                 </Section>
-                <Section
+                {/*   <Section
                     heading={{
                         title: 'Your top mixes',
                         size: 'medium',
@@ -53,7 +53,7 @@ const Home = () => {
                         size: 'medium',
                         href: 'https://www.google.com',
                     }}
-                />
+                /> */}
             </PageContent>
         </div>
     );

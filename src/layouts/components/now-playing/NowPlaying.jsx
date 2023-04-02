@@ -1,26 +1,50 @@
 import classNamesBinding from 'classnames/bind';
 
-import styles from './NowPlaying.module.scss';
-import thumbnail from '../../../assets/images/vo-tuyet-voi-nhat_thumbnail.jpg';
+import { useContext, useRef, useState } from 'react';
 import images from '../../../assets/images/images';
+import thumbnail from '../../../assets/images/vo-tuyet-voi-nhat_thumbnail.jpg';
+import TracksContext from '../../../contexts/TracksContext';
+import styles from './NowPlaying.module.scss';
+import { Link } from 'react-router-dom';
+import useStore from '../../../hooks/useStore';
 
 const css = classNamesBinding.bind(styles);
-const HeartIcon = images.mediaControl.heartIconSvg;
-const NoHeartIcon = images.mediaControl.noHeartIconSvg;
-const PicInPicIcon = images.mediaControl.picInPicIconSvg;
+const HeartIcon = images.nowPlaying.heartIconSvg;
+const NoHeartIcon = images.nowPlaying.noHeartIconSvg;
+const PicInPicIcon = images.nowPlaying.picInPicIconSvg;
 
-const ShuffleIcon = images.mediaControl.shuffleIconSvg;
-const PreviousIcon = images.mediaControl.previousIconSvg;
-const PauseIcon = images.mediaControl.pauseIconSvg;
-const NextIcon = images.mediaControl.nextIconSvg;
-const RepeatIcon = images.mediaControl.repeatIconSvg;
+const ShuffleIcon = images.nowPlaying.shuffleIconSvg;
+const PreviousIcon = images.nowPlaying.previousIconSvg;
+const PlayIcon = images.nowPlaying.playIconSvg;
+const PauseIcon = images.nowPlaying.pauseIconSvg;
+const NextIcon = images.nowPlaying.nextIconSvg;
+const RepeatIcon = images.nowPlaying.repeatIconSvg;
 
-const LyricsIcon = images.mediaControl.lyricsIconSvg;
-const DevicePickerIcon = images.mediaControl.devicePickerIconSvg;
-const VolumeIcon = images.mediaControl.volumeIconSvg;
-const QueueIcon = images.mediaControl.queueIconSvg;
+const LyricsIcon = images.nowPlaying.lyricsIconSvg;
+const DevicePickerIcon = images.nowPlaying.devicePickerIconSvg;
+const VolumeIcon = images.nowPlaying.volumeIconSvg;
+const QueueIcon = images.nowPlaying.queueIconSvg;
 
 const NowPlaying = () => {
+    const [playing, setPlaying] = useState(false);
+    const [state, dispatch] = useStore();
+    const audioRef = useRef();
+
+    const queuePlayingTrack = state.queueTracks.find(
+        (track) =>
+            track.code ===
+            /* state.queueTrackPlayingCode */ 'Tu-Su-Orange-3a15dO145N4ZNN20'
+    );
+
+    const handleBtnPlay = (e) => {
+        if (!playing) {
+            audioRef.current.play();
+        } else {
+            audioRef.current.pause();
+        }
+        setPlaying((prev) => !prev);
+    };
+
     return (
         <div className={css('wrapper')}>
             <div className={css('now-playing')}>
@@ -44,7 +68,7 @@ const NowPlaying = () => {
                     </button>
                 </div>
             </div>
-            
+
             <div className={css('player-controls')}>
                 <div className={css('control-buttons')}>
                     <div className={css('control-buttons-left')}>
@@ -55,8 +79,11 @@ const NowPlaying = () => {
                             <PreviousIcon />
                         </button>
                     </div>
-                    <button className={css('btn', 'btn-pause')}>
-                        <PauseIcon />
+                    <button
+                        className={css('btn', 'btn-play')}
+                        onClick={handleBtnPlay}
+                    >
+                        {playing ? <PauseIcon /> : <PlayIcon />}
                     </button>
                     <div className={css('control-buttons-right')}>
                         <button className={css('btn')}>
@@ -79,9 +106,9 @@ const NowPlaying = () => {
                 <button className={css('btn')}>
                     <LyricsIcon />
                 </button>
-                <button className={css('btn')}>
+                <Link className={css('btn')} to={'/queue'}>
                     <QueueIcon />
-                </button>
+                </Link>
                 <button className={css('btn')}>
                     <DevicePickerIcon />
                 </button>
@@ -95,6 +122,11 @@ const NowPlaying = () => {
                     <div className={css('progressbar')}></div>
                 </div>
             </div>
+            <audio
+                ref={audioRef}
+                src={queuePlayingTrack?.links[1]?.href}
+                onEnded={(e) => setPlaying((prev) => !prev)}
+            />
         </div>
     );
 };

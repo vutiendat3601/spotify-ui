@@ -34,7 +34,9 @@ const Header = ({ children }) => {
                         />
                     </figure>
                     <span className={css('profile-name')}>Dat Vu</span>
-                    <ArrowDownIcon />
+                    <div className={css('arrow-down')}>
+                        <ArrowDownIcon />
+                    </div>
                 </button>
             </div>
         </header>

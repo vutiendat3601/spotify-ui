@@ -6,18 +6,19 @@ import { ReactComponent as SidebarCreatePlaylistIconSvg } from './sidebar/sideba
 import { ReactComponent as SidebarLikedSongsIconSvg } from './sidebar/sidebar_liked-songs-icon.svg';
 import { ReactComponent as SidebarYourEpisodesSvg } from './sidebar/sidebar_your-episodes-icon.svg';
 
-import { ReactComponent as MediaControlHeartIconSvg } from './media-control/media-control_heart-icon.svg';
-import { ReactComponent as MediaControlNoHeartIconSvg } from './media-control/media-control_no-heart-icon.svg';
-import { ReactComponent as MediaControlPicInPicIconSvg } from './media-control/media-control_pic-in-pic-icon.svg';
-import { ReactComponent as MediaControlShuffleIconSvg } from './media-control/media-control_shuffle-icon.svg';
-import { ReactComponent as MediaControlPreviousIconSvg } from './media-control/media-control_previous-icon.svg';
-import { ReactComponent as MediaControlPauseIconSvg } from './media-control/media-control_pause-icon.svg';
-import { ReactComponent as MediaControlNextIconSvg } from './media-control/media-control_next-icon.svg';
-import { ReactComponent as MediaControlRepeatIconSvg } from './media-control/media-control_repeat-icon.svg';
-import { ReactComponent as MediaControlDevicePickerIconSvg } from './media-control/media-control_device-picker-icon.svg';
-import { ReactComponent as MediaControlVolumeIconSvg } from './media-control/media-control_volume-icon.svg';
-import { ReactComponent as MediaControlQueueIconSvg } from './media-control/media-control_queue-icon.svg';
-import { ReactComponent as MediaControlLyricsIconSvg } from './media-control/media-control_lyrics-icon.svg';
+import { ReactComponent as NowPlayingHeartIconSvg } from './now-playing/now-playing_heart-icon.svg';
+import { ReactComponent as NowPlayingNoHeartIconSvg } from './now-playing/now-playing_no-heart-icon.svg';
+import { ReactComponent as NowPlayingPicInPicIconSvg } from './now-playing/now-playing_pic-in-pic-icon.svg';
+import { ReactComponent as NowPlayingShuffleIconSvg } from './now-playing/now-playing_shuffle-icon.svg';
+import { ReactComponent as NowPlayingPreviousIconSvg } from './now-playing/now-playing_previous-icon.svg';
+import { ReactComponent as NowPlayingPlayIconSvg } from './now-playing/now-playing_play-icon.svg';
+import { ReactComponent as NowPlayingPauseIconSvg } from './now-playing/now-playing_pause-icon.svg';
+import { ReactComponent as NowPlayingNextIconSvg } from './now-playing/now-playing_next-icon.svg';
+import { ReactComponent as NowPlayingRepeatIconSvg } from './now-playing/now-playing_repeat-icon.svg';
+import { ReactComponent as NowPlayingDevicePickerIconSvg } from './now-playing/now-playing_device-picker-icon.svg';
+import { ReactComponent as NowPlayingVolumeIconSvg } from './now-playing/now-playing_volume-icon.svg';
+import { ReactComponent as NowPlayingQueueIconSvg } from './now-playing/now-playing_queue-icon.svg';
+import { ReactComponent as NowPlayingLyricsIconSvg } from './now-playing/now-playing_lyrics-icon.svg';
 
 import { ReactComponent as HeaderBackButtonIconSvg } from './header/header_back-button.svg';
 import { ReactComponent as HeaderForwardButtonIconSvg } from './header/header_forward-button.svg';
@@ -35,19 +36,20 @@ const images = {
         likedSongsIconSvg: SidebarLikedSongsIconSvg,
         yourEpisodesSvg: SidebarYourEpisodesSvg,
     },
-    mediaControl: {
-        heartIconSvg: MediaControlHeartIconSvg,
-        noHeartIconSvg: MediaControlNoHeartIconSvg,
-        picInPicIconSvg: MediaControlPicInPicIconSvg,
-        shuffleIconSvg: MediaControlShuffleIconSvg,
-        previousIconSvg: MediaControlPreviousIconSvg,
-        pauseIconSvg: MediaControlPauseIconSvg,
-        nextIconSvg: MediaControlNextIconSvg,
-        repeatIconSvg: MediaControlRepeatIconSvg,
-        devicePickerIconSvg: MediaControlDevicePickerIconSvg,
-        volumeIconSvg: MediaControlVolumeIconSvg,
-        queueIconSvg: MediaControlQueueIconSvg,
-        lyricsIconSvg: MediaControlLyricsIconSvg,
+    nowPlaying: {
+        heartIconSvg: NowPlayingHeartIconSvg,
+        noHeartIconSvg: NowPlayingNoHeartIconSvg,
+        picInPicIconSvg: NowPlayingPicInPicIconSvg,
+        shuffleIconSvg: NowPlayingShuffleIconSvg,
+        previousIconSvg: NowPlayingPreviousIconSvg,
+        playIconSvg: NowPlayingPlayIconSvg,
+        pauseIconSvg: NowPlayingPauseIconSvg,
+        nextIconSvg: NowPlayingNextIconSvg,
+        repeatIconSvg: NowPlayingRepeatIconSvg,
+        devicePickerIconSvg: NowPlayingDevicePickerIconSvg,
+        volumeIconSvg: NowPlayingVolumeIconSvg,
+        queueIconSvg: NowPlayingQueueIconSvg,
+        lyricsIconSvg: NowPlayingLyricsIconSvg,
     },
     header: {
         backButtonIcon: HeaderBackButtonIconSvg,

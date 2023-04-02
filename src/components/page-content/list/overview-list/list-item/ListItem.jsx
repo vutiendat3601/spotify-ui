@@ -8,7 +8,6 @@ const css = classNamesBinding.bind(styles);
 const PlayButtonIcon = images.pageContent.playButtonIcon;
 
 const ListItem = ({ item }) => {
-    console.log(item);
     return (
         <div className={css('wrapper')}>
             <div className={css('thumbnail')}>

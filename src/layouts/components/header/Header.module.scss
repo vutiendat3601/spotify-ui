@@ -70,3 +70,12 @@
         color: var(--white-color);
     }
 }
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .profile-name {
+        .arrow-down {
+            display: none;
+        }
+    }
+}

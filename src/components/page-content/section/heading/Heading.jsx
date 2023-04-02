@@ -7,7 +7,6 @@ const css = classNamesBinding.bind(styles);
 
 const Heading = ({ title, href, large = false }) => {
     const Comp = href ? Link : 'div';
-    console.log(large);
 
     return (
         <div className={css('wrapper')}>

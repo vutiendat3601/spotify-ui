@@ -1,6 +1,7 @@
 .wrapper {
     --title-font-size: var(--24px-em);
 
+    color: var(--white-color);
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -24,7 +25,6 @@
 }
 
 /* ### Commons */
-
 .hover-underline {
     &:hover {
         text-decoration: underline;

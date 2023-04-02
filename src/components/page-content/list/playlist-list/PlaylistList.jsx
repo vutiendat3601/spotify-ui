@@ -1,5 +1,5 @@
 import classNamesBinding from 'classnames/bind';
-import ListItem from './list-item/ListItem';
+import Card from './card/Card';
 
 import styles from './PlaylistList.module.scss';
 
@@ -9,7 +9,12 @@ const PlaylistList = ({ items }) => {
     return (
         <div className={css('wrapper')}>
             {items.map((item, index) => (
-                <ListItem key={index} item={item} />
+                <Card
+                    key={index}
+                    thumbnail={item.thumbnail}
+                    title={item.name}
+                    description={item.description}
+                />
             ))}
         </div>
     );
